@@ -1,11 +1,8 @@
-from flask import Flask, request, jsonify, url_for
+from flask import Flask, request, jsonify
 import requests
 from des import decipher
 
 app = Flask(__name__)
-
-app.add_url_rule('/favicon.ico',
-                 redirect_to=url_for('static', filename='favicon.ico'))
 
 @app.route('/')
 def index():
