@@ -4,7 +4,8 @@ from des import decipher
 
 app = Flask(__name__)
 
-app.add_url_rule('/favicon.ico', 'https://staticfe.saavn.com/web6/jioindw/dist/1711602205/_i/favicon.ico')
+app.add_url_rule('/favicon.ico',
+                 redirect_to=url_for('static', filename='favicon.ico'))
 
 @app.route('/')
 def index():
